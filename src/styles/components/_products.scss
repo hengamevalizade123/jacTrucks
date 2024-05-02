@@ -1,0 +1,208 @@
+.c-section--products {
+    padding-bottom: 2em;
+    padding-top: 0;
+}
+
+.c-products {
+    background: var(--color-white);
+    display: flex;
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 2px 0 0 rgba(221, 228, 237, 0.5019607843);
+
+    @include mq($until: desktop) {
+        flex-direction: column;
+    }
+
+    &__title {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-dark-02);
+        text-align: center;
+        padding: 1em;
+        position: relative;
+        border-left: 2px dotted var(--color-grey-02-20);
+
+        h2 {
+            color: var(--color-dark-02);
+        }
+
+        p {
+            color: var(--color-dark-02-60);
+            font-weight: normal;
+            @include font-size(14px, 1.8);
+        }
+
+        a {
+            background-color: var(--color-secondary);
+            color: var(--color-white-80);
+            border-radius: $border-radius;
+            padding: .1em .8em;
+            @include font-size(14px, 1.8);
+
+            svg {
+                vertical-align: middle;
+                margin-right: .3em;
+            }
+        }
+    }
+
+    &__carousel {
+        flex: 4;
+
+        .flickity-page-dots {
+            bottom: 1.3em;
+            display: flex;
+            flex-direction: column;
+            align-content: flex-end;
+            width: auto;
+            left: 1em;
+
+            .dot {
+                margin: 4px 0 0;
+                background: var(--color-dark-02-80);
+                opacity: .4;
+                border-radius: 15px;
+                height: 0.5em;
+                width: 0.5em;
+                box-shadow: none;
+                transition: opacity .125s linear, height .135s linear;
+
+                &.is-selected {
+                    height: 1.1em;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .flickity-button {
+            background: none;
+        }
+
+        .flickity-prev-next-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        .previous {
+            left: 5px;
+        }
+
+        /* icon color */
+        .flickity-button-icon {
+            fill: var(--color-dark-02);
+        }
+    }
+
+    &__carousel-cell {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__button {
+        position: absolute;
+        width: 4em;
+        height: 4em;
+        left: -2em;
+        z-index: 1;
+        background: var(--color-dark-60);
+        border-radius: 100%;
+        padding: 4px;
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--color-white-20);
+        cursor: pointer;
+    }
+
+    &__btn-info {
+        @include mq($until: sm) {
+            display: none;
+        }
+
+        position: absolute;
+        bottom: 0;
+        padding: 0.3em 3em;
+        right: 2em;
+        display: flex;
+        gap: 1em;
+
+        a {
+            padding: .5em 2em;
+            background: var(--color-white);
+            color: var(--color-dark-02);
+            border-radius: 5px;
+            @include font-size(14px, 1.8);
+
+            &:hover {
+                transition: all linear .3s;
+                background: #f7f8fa;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__info-products {
+        background-color: #F7F8FA;
+        display: flex;
+        margin: 2em 3em;
+        @include mq($until:md){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__info {
+        width: calc(70% - .7em);
+        padding: 1em 1em;
+        padding-right: 2.5em;
+        @include mq($until:md){
+            width: 100%;
+            padding: 2.5em;
+            padding-bottom: 1em;
+        }
+        h2 {
+            @include font-size(32px, 1);
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        .c-products__info-click {
+            font-weight: 700;
+            @include font-size(20px, 1.8);
+            color: #676768;
+
+            svg {
+                vertical-align: middle;
+                margin: 0em 0.5em;
+            }
+        }
+
+        .c-products__info-desc {
+            @include font-size(14px, 1.5);
+            color: var(--color-dark-02-80);
+            text-align: justify;
+        }
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mq($until:md){
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+        width: calc(30% - .7em);
+        @include font-size(32px, 1);
+        img{
+            height: 200px;
+        }
+    }
+}

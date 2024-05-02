@@ -1,0 +1,170 @@
+.c-section--blog-items {
+    padding-top: 2em;
+    padding-bottom: 3em;
+    background-color: var(--color-white);
+}
+
+.c-blog-items {
+    span {
+        @include font-size(14px, 1.1);
+        color: var(--color-dark-02-40);
+    }
+
+    &__carousel-cell {
+        width: calc(25% - 1.5em);
+        margin-right: 2em;
+
+        .c-blog-box__item-img {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            border-radius: $border-radius;
+
+            >img {
+                width: 100%;
+                border-radius: $border-radius;
+                object-fit: cover;
+                height: 11em;
+            }
+
+            .overlayer{
+                background-color: #3b3b3bef;
+                opacity: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                transition: all ease-out .6s;
+
+                span {
+                    color: var(--color-white);
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 1em;
+                    right: 1em;
+                    bottom: 1em;
+                    top: 1em;
+                    border: 1px solid var(--color-white-20);
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        &:hover {
+            .overlayer {
+                opacity: 0;
+            }
+        }
+
+        span {
+            @include font-size(10px, 1.5);
+        }
+
+        @include mq($from: md, $until: desktop) {
+            width: calc(25% - 1.5em);
+
+        }
+
+        @include mq($from: sm, $until: md) {
+            width: 47%;
+        }
+
+        @include mq($until: sm) {
+            width: 100%;
+        }
+
+        .c-blog-box__item-info {}
+
+        a {
+            display: block;
+        }
+    }
+
+    h2 {
+        @include font-size(32px, 1.4);
+        margin-bottom: 1em;
+        text-align: right;
+        color: var(--color-secondary);
+		@include mq($until:md){
+			@include font-size(24px, 1);
+		}
+    }
+
+    h3 {
+        color: var(--color-dark-02);
+        @include font-size(18px, 1.5);
+        margin-bottom: 0;
+        margin-top: .7em;
+    }
+
+    span {
+        color: var(--color-dark-02-60);
+        @include font-size(14px, 1);
+        margin-top: 1em;
+        display: block;
+    }
+
+    p {
+        color: var(--color-dark-02-80);
+        @include font-size(14px, 1.8);
+    }
+
+}
+
+.flickity-page-dots .dot {
+    background-color: #D71921;
+    margin: 0 4px;
+    height: 8px;
+    width: 8px;
+    transition: all .25s ease-in;
+
+    &.is-selected {
+        width: 24px;
+        height: 8px;
+        background-color: rgba(215, 25, 33, 0.7);
+        border-radius: 30px;
+    }
+}
+
+.flickity-button {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(123, 128, 140, 1);
+
+    @include mq($until: sm) {
+        display: none;
+    }
+}
+
+.flickity-prev-next-button.next {
+	left: 0px !important;
+}
+
+.flickity-prev-next-button.previous {
+	right: auto !important;
+	left: 50px !important;
+}
+
+.flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+    left: 30%;
+    top: 25%;
+    width: 40%;
+    height: 50%;
+}

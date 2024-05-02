@@ -1,0 +1,18 @@
+.c-section--about-description {
+	padding-top: 2em;
+}
+
+.c-about-description {
+	background-color: #f7f8fa;
+	border-radius: $border-radius;
+	padding: 2em;
+	@include mq($until:md){
+		padding: 1em;
+	}
+	p {
+		@include font-size(16px, 1.8);
+		color: var(--color-text);
+		text-align: justify;
+		margin: 0;
+	}
+}

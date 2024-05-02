@@ -1,0 +1,48 @@
+body,
+html {
+	font-family: $lato;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	color: #000;
+	background: #ffffff;
+}
+
+.main {
+	background-color: #fff;
+}
+
+a {
+	text-decoration: none;
+
+	&.hover-btn {
+		z-index: 1;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			color: var(--color-white);
+
+			&:before {
+				height: 100%;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			transition: .3s;
+			height: 0;
+			background: rgb(69, 69, 69);
+			border-radius: 100%;
+			transform: scale(1.5);
+			z-index: -2;
+		}
+	}
+}
+

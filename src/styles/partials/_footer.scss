@@ -1,0 +1,229 @@
+footer {
+	background-color: var(--color-primary);
+}
+
+.c-footer__copyright {
+	color: var(--color-white);
+	padding: .7em;
+	border-top: 1px solid #ffffff17;
+	margin-top: 1em;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	p {
+		margin: 0;
+		font-size: 13px;
+		display: flex;
+		padding: 0.7em 0;
+		@include mq($until:desktop){
+			justify-content: center;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 20.6667C16.3387 20.6667 20.6666 16.3387 20.6666 11C20.6666 5.66124 16.3387 1.33333 11 1.33333C5.66123 1.33333 1.33331 5.66124 1.33331 11C1.33331 16.3387 5.66123 20.6667 11 20.6667Z" stroke="white"/><path d="M10.9997 16.3333C13.9452 16.3333 16.333 13.9455 16.333 11C16.333 8.05449 13.9452 5.66667 10.9997 5.66667C8.05414 5.66667 5.66632 8.05449 5.66632 11C5.66632 13.9455 8.05414 16.3333 10.9997 16.3333Z" fill="white"/></svg>');
+		top: -.7em;
+		right: 2em;
+		width: 23px;
+		height: 23px;
+		@include mq($until: desktop) {
+			display: none;
+		}
+	}
+
+	@include mq($until: desktop) {
+		flex-direction: column-reverse;
+		gap: .5em;
+	}
+}
+
+.c-section--footer {
+	background: rgba(28, 28, 28, 1);
+	border-top: 1px solid var(--color-grey-02-20);
+	padding: 1.5em 0 0;
+	position: relative;
+}
+
+.c-footer {
+	display: flex;
+	gap: 3.25em;
+	justify-content: space-between;
+	flex-direction: column;
+	padding-top: 1em;
+
+	@include mq($until: lg) {
+		gap: 1.25em;
+	}
+
+	@include mq(lg) {
+		flex-direction: row;
+	}
+
+	&__link {
+		display: flex;
+
+		ul {
+			list-style: none;
+			flex: 1;
+			margin: 0;
+			@include mq($until: desktop) {
+				padding-right: 0;
+			}
+
+			li {
+				a {
+					@include font-size(14px, 1.8);
+					color: var(--color-white-80);
+					text-align: justify;
+
+					&:hover {
+						color: var(--color-secondary);
+					}
+				}
+			}
+		}
+	}
+}
+
+.c-footer__col {
+	flex: 1;
+
+	@include mq($until: lg) {
+		width: 100%;
+	}
+}
+
+.c-footer__main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include mq($until: lg) {
+		order: 1;
+	}
+
+	@include mq(lg) {
+		flex: 1;
+	}
+
+	p {
+		margin: 0;
+		@include font-size(14px, 2.1);
+		color: var(--color-white-80);
+		text-align: justify;
+		position: relative;
+		padding: 0;
+	}
+}
+
+
+.c-footer__title {
+	font-weight: 600;
+	font-variation-settings: "wght" 600;
+	@include font-size(16px, 1.8);
+	color: var(--color-white);
+	margin-bottom: 1.5em;
+	width: 100%;
+}
+
+.c-footer__contact {
+	@include font-size(14px, 1.8);
+	color: var(--color-white-80);
+	text-align: justify;
+
+	@include mq($until: lg) {
+		order: 2;
+		padding-top: 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		//align-items: center;
+		//text-align: center;
+	}
+
+	.c-phone__map {
+		svg {
+			height: 16px;
+			vertical-align: middle;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--color-white-80);
+		font-weight: 300;
+		font-variation-settings: "wght" 300;
+		@include font-size(14px, 1.8);
+		transition: color .125s linear;
+
+		&:hover {
+			color: var(--color-white-60);
+		}
+	}
+}
+
+.c-footer__number {
+	display: flex;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	direction: ltr;
+	align-items: center;
+	justify-content: flex-end;
+
+	li {
+		&:last-of-type {
+			padding-left: 1em;
+			margin-left: 1em;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 2px;
+				height: 1em;
+				background: var(--color-dark-02-20);
+				left: 0;
+				top: 4px;
+			}
+		}
+	}
+}
+
+.c-footer__logo {
+	width: 100%;
+	margin-bottom: .5em;
+
+	@include mq($until: desktop) {
+		display: flex;
+	}
+
+	img {
+		height: 4em;
+	}
+}
+
+.social-media {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	a {
+		transition: all .2s ease-out;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	svg {
+		margin-left: .5em;
+	}
+}

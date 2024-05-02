@@ -1,0 +1,15 @@
+.c-section--price-contact{
+    padding-top: 0;
+	padding-bottom: 2em;
+}
+.c-price-contact{
+    p{
+        @include font-size(16px,1.8);
+    color: var(--color-text);
+    text-align: justify;
+    a{
+        display: block;
+        color: var(--color-secondary);
+    }
+    }
+}

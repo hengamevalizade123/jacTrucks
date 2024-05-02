@@ -1,0 +1,79 @@
+.c-section--contact-form {
+    padding-top: 0;
+}
+
+.c-contact-form {
+    padding: 1em 2em 1em 3.3em;
+    background-color: var(--color-white);
+    box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 2px 0 0 rgba(221, 228, 237, 0.5019607843);
+    border-radius: $border-radius;
+
+    @include mq($until: sm) {
+        padding: 1em 2em 1em 3.3em
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0em 3em;
+        justify-content: space-between;
+
+        p {
+            margin: .5em 0 1em;
+
+            &:nth-child(5) {
+                flex-basis: 100%;
+            }
+
+            &:nth-child(6) {
+                flex-basis: 100%;
+                direction: ltr;
+            }
+
+            flex-basis: calc(48% - 1.5em);
+
+            @include mq($until: sm) {
+                flex-basis: 100%;
+            }
+
+            label {
+                width: 100%;
+                display: block;
+                color: var(--color-dark-02-80);
+
+                span {
+                    display: block;
+                    width: 100%;
+                    margin-top: .3em;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    border-radius: $border-radius;
+                    border: 1px solid var(--color-grey-02);
+                    padding: 0.4em;
+                }
+            }
+
+            input[type=submit] {
+                background-color: var(--color-secondary);
+                color: var(--color-white);
+                border-radius: $border-radius;
+                padding: 0.2em 4em;
+                @include font-size(17px, 1.8);
+                border: none;
+            }
+        }
+    }
+
+    p {
+        @include font-size(15px, 1.8);
+        color: var(--color-dark-02-80);
+        text-align: justify;
+    }
+}

@@ -1,0 +1,70 @@
+// TOOLS
+@import '../../node_modules/normalize.css/normalize';
+@import 'tools/_mq';
+@import 'tools/tools.aliases';
+
+// SETTINGS
+@import 'settings/_settings.global';
+@import 'settings/_mq';
+@import 'settings/_fonts.scss';
+
+// ELEMENTS
+@import 'elements/_var.scss';
+@import 'elements/_ie.scss';
+@import 'elements/_defaults.scss';
+@import 'elements/_misc.scss';
+
+// OBJECTS
+//
+@import 'objects/_row.scss';
+@import 'objects/_section.scss';
+
+// COMPONENTS
+//
+// Build and include your project’s UI components here.
+//----------------------------------*\
+// Components
+//----------------------------------*/
+@import 'components/_about-banner.scss';
+@import 'components/_about-description.scss';
+@import 'components/_about-item-banner.scss';
+@import 'components/_about-text.scss';
+@import 'components/_banner-items.scss';
+@import 'components/_blog-items.scss';
+@import 'components/_blog-lists.scss';
+@import 'components/_blog.scss';
+@import 'components/_button.scss';
+@import 'components/_comment.scss';
+@import 'components/_contact-banner.scss';
+@import 'components/_contact-form.scss';
+@import 'components/_contact-info.scss';
+@import 'components/_content-product.scss';
+@import 'components/_customer-service-banner.scss';
+@import 'components/_faq.scss';
+@import 'components/_home-products.scss';
+@import 'components/_installment-banner.scss';
+@import 'components/_installment-product.scss';
+@import 'components/_installment-text.scss';
+@import 'components/_installment-desc.scss';
+@import 'components/_link.scss';
+@import 'components/_main-slider.scss';
+@import 'components/_post.scss';
+@import 'components/_price-banner.scss';
+@import 'components/_price-contact.scss';
+@import 'components/_price-determination.scss';
+@import 'components/_price-text.scss';
+@import 'components/_products-list.scss';
+@import 'components/_products.scss';
+@import 'components/_section.scss';
+@import 'components/_logo-items.scss';
+@import 'components/_home-video.scss';
+@import 'components/_breadcrum.scss';
+@import 'components/_home-tabs.scss';
+@import 'components/error-404';
+
+// PARTIALS
+@import 'partials/_header.scss';
+@import 'partials/_footer.scss';
+
+// UTILITIES
+@import 'utilities/_flex.scss';

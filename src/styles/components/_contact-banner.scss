@@ -1,0 +1,12 @@
+.c-section--contact-banner{
+    padding-bottom: 0;
+    padding-top: .3em;
+}
+.c-contact-banner {
+	display: flex;
+    img {
+        height: auto;
+        width: 100%;
+        border-radius: $border-radius;
+    }
+}

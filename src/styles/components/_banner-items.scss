@@ -1,0 +1,26 @@
+.c-section--banner-items {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.c-banner-items {
+    display: flex;
+    gap: 1.4em;
+
+    @include mq($until: sm) {
+        flex-direction: column;
+    }
+
+    img {
+        width: calc(50% - .7em);
+
+        @include mq($until: sm) {
+            width: 100%;
+           &:last-child{
+            display: none;
+           }
+        }
+
+        border-radius: $border-radius;
+    }
+}

@@ -1,0 +1,21 @@
+.c-section--logo-items{
+    padding: 4em 0;
+}
+.c-logo-items-cell{
+    width: calc(17% - 2em);
+    margin-right: 2em;
+    text-align: center;
+	@include mq($from:sm,$until:md){
+		width: calc(20% - 2em);
+	}
+	@include mq($until:sm) {
+		width: calc(50% - 2em);
+	}
+    img{
+        height: 4em;
+		max-width: 100%;
+		@include mq($from:sm,$until:md) {
+			height: 2.5em;
+		}
+    }
+}

@@ -1,0 +1,64 @@
+.c-section--error-404 {
+	background: #F8F8F8;
+	position: relative;
+
+	&:before {
+		content: "";
+		background-image: url(../images/bg-404-page.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 58%;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		opacity: .1;
+		@include mq($until:md){
+			width: 100%;
+		}
+	}
+}
+
+.c-error-404 {
+	display: flex;
+	z-index: 24;
+	position: relative;
+	&__img {
+		flex: 1;
+		img {
+			width: 100%;
+		}
+		@include mq($until:md){
+			display: none;
+		}
+	}
+
+	&__info {
+		flex: 1.4;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		h2{
+			@include font-size(42px,1);
+			margin-top: 0;
+		}
+		a{
+			color: var(--color-secondary);
+			font-weight: 600;
+			@include font-size(22px,1);
+		}
+		@include mq($until:md){
+			width: 100%;
+			align-items: center;
+			h2{
+				@include font-size(22px,1);
+			}
+			svg{
+				width: 220px;
+				height: 200px;
+			}
+		}
+	}
+
+}

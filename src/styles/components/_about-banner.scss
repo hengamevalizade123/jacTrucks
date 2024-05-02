@@ -1,0 +1,11 @@
+.c-section--about-banner {
+    padding-top: .5em;
+    padding-bottom: 2em;
+
+    .c-about-banner {
+        img {
+            width: 100%;
+            border-radius: $border-radius;
+        }
+    }
+}

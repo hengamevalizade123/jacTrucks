@@ -1,0 +1,22 @@
+.c-section--main-slider {
+	padding: 1em 0 3em;
+}
+
+.c-main-slider {
+	position: relative;
+
+	&__carousel-cell {
+		width: 100%;
+		margin-right: 1em;
+		border-radius: $border-radius;
+	}
+
+	img {
+		width: 100%;
+		border-radius: $border-radius;
+	}
+}
+
+.flickity-viewport {
+	border-radius: 5px;
+}

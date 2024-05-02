@@ -1,0 +1,20 @@
+.c-blog {
+    color: var(--color-primary);
+
+    .c-section__title {
+        @include font-size(24px, 1.6);
+        font-weight: 900;
+        text-align: center;
+    }
+}
+
+.c-section--blog {
+    padding-top: 2.25em;
+    padding-bottom: 3.25em;
+}
+
+.c-blog-items {
+    &__carousel {
+        border-radius: $border-radius;
+    }
+}

@@ -1,0 +1,11 @@
+.c-section--installment-banner{
+    padding-top: .3em;
+    padding-bottom: 4em;
+    .c-installment-banner{
+		display: flex;
+        img{
+            width: 100%;
+            border-radius: $border-radius;
+        }
+    }
+}

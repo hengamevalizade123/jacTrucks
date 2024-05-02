@@ -1,0 +1,18 @@
+.c-section--about-item-banner{
+        padding-bottom: 0;
+        padding-top: 2em;
+}
+.c-about-item-banner{
+        display: flex;
+        gap: 1.5em;
+        img{
+            width: calc(50% - 0.77em);
+            border-radius: $border-radius;
+			@include mq($until:sm){
+				width: 100%;
+				&:last-child{
+					display: none;
+				}
+			}
+        }
+}

@@ -1,0 +1,10 @@
+.c-section--price-banner{
+    padding-top: 1em;
+    padding-bottom: 2em;
+    .c-price-banner{
+        img{
+            width: 100%;
+            border-radius: $border-radius;
+        }
+    }
+}

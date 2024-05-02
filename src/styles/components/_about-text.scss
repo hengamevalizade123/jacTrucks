@@ -1,0 +1,21 @@
+.c-section--about-text {
+	padding: 0;
+}
+
+.c-about-text {
+	h1 {
+		@include font-size(36px, 1.8);
+		color: var(--color-secondary);
+		margin: 0;
+		@include mq($until:md){
+			@include font-size(28px, 1.8);
+		}
+	}
+
+	p {
+		@include font-size(16px, 1.8);
+		color: var(--color-text);
+		text-align: justify;
+		margin: 0
+	}
+}
